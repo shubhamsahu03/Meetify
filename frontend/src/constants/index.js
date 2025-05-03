@@ -179,7 +179,7 @@ export const THEMES = [
     "Dutch",
   ];
   
-  export const LANGUAGE_TO_FLAG = {
+export const LANGUAGE_TO_FLAG = {
     english: "gb",
     spanish: "es",
     french: "fr",
@@ -194,4 +194,43 @@ export const THEMES = [
     italian: "it",
     turkish: "tr",
     dutch: "nl",
-  };
+    swedish: "se",
+    norwegian: "no",
+    finnish: "fi",
+    danish: "dk",
+    polish: "pl",
+    thai: "th",
+    vietnamese: "vn",
+    indonesian: "id",
+    greek: "gr",
+    czech: "cz",
+    hungarian: "hu",
+};
+
+export const LOCATIONS = [
+    { name: "United States", code: "US" },
+    { name: "Spain", code: "ES" },
+    { name: "France", code: "FR" },
+    { name: "Germany", code: "DE" },
+    { name: "China", code: "CN" },
+    { name: "Japan", code: "JP" },
+    { name: "South Korea", code: "KR" },
+    { name: "India", code: "IN" },
+    { name: "Russia", code: "RU" },
+    { name: "Brazil", code: "BR" },
+    { name: "Saudi Arabia", code: "SA" },
+    { name: "Italy", code: "IT" },
+    { name: "Turkey", code: "TR" },
+    { name: "Netherlands", code: "NL" },
+    { name: "Sweden", code: "SE" },
+    { name: "Norway", code: "NO" },
+    { name: "Finland", code: "FI" },
+    { name: "Denmark", code: "DK" },
+    { name: "Poland", code: "PL" },
+    { name: "Thailand", code: "TH" },
+    { name: "Vietnam", code: "VN" },
+    { name: "Indonesia", code: "ID" },
+    { name: "Greece", code: "GR" },
+    { name: "Czech Republic", code: "CZ" },
+    { name: "Hungary", code: "HU" },
+];
