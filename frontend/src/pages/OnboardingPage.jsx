@@ -18,7 +18,32 @@ const OnboardingPage = () => {
     location: authUser?.location || "",
     profilePic: authUser?.profilePic || "",
   });
+const fetchLocation = async () => {
+    try {
+        const response = await fetch("https://ipapi.co/json/");
+        if (!response.ok) throw new Error("Failed to fetch location");
+        return await response.json();
+    } catch (error) {
+        toast.error("Unable to fetch location. Please enter manually.");
+        return null;
+    }
+};
 
+useEffect(() => {
+    const setLocation = async () => {
+        const locationData = await fetchLocation();
+        if (locationData) {
+            setFormState((prevState) => ({
+                ...prevState,
+                location: `${locationData.city}, ${locationData.country_name}`,
+            }));
+        }
+    };
+
+    if (!formState.location) {
+        setLocation();
+    }
+}, [formState.location]);
   const { mutate: onboardingMutation, isPending } = useMutation({
     mutationFn: completeOnboarding,
     onSuccess: () => {
